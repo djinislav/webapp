@@ -43,6 +43,6 @@ jobs:
     - name: Pull image from docker hub
       run: sudo docker pull djinislav/springboot-example:latest
     - name: Delete old container
-      run: docker rm -f springboot-example-container
+      run: sudo docker rm -f springboot-example-container
     - name: Run docker container
-      run: docker run -d -p 8080:8080 --name springboot-example-container djinislav/springboot-example
+      run: sudo docker run -d -p 8080:8080 --name springboot-example-container djinislav/springboot-example
