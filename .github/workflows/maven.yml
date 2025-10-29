@@ -33,7 +33,7 @@ jobs:
     - name: Login to docker hub
       run: docker login -u ${{vars.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
     - name: Build docker image
-      run: docker build -t djinislav/springboot-example
+      run: docker build -t djinislav/springboot-example .
     - name: Publish image to docker hub
       run: docker push djinislav/springboot-example:latest
       
