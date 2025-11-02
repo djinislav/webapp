@@ -18,7 +18,7 @@ class TestControllerTest {
     void hello_ReturnsExpectedJson() throws Exception {
         mockMvc.perform(get("/")) // sends an HTTP GET request to the endpoint defined in your controller’s @GetMapping.
                 .andExpect(status().isOk()) // status 200 - ok
-                .andExpect(jsonPath("$.name").value("djini"))
+                .andExpect(jsonPath("$.name").value("djinislav"))
                 .andExpect(jsonPath("$.email").value("denislavdanov@gmail.com"));
     }
 }
